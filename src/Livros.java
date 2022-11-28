@@ -8,7 +8,6 @@ public class Livros {
 
     private ArrayList<String> livros;
 
-
     public String getNomelivro() {
         return nomelivro;
     }
@@ -37,22 +36,22 @@ public class Livros {
         return livros;
     }
 
-    public void setLivros(ArrayList<String> livros) {
+    public ArrayList<String> setLivros() {
         this.livros = livros;
+
+        return null;
     }
 
     public void imprimir(){
-        System.out.println("nome do livro "+ getNomelivro() + " Autor do livro " + getAutor() + " Categoria " + getCategoria());
+        System.out.println("nome do livro: "+ getNomelivro() + " Autor do livro: " + getAutor() + " Categoria: " + getCategoria());
     }
 
-    public ArrayList<String> listalivros(){
+    public ArrayList<String> listalivros(Livros livros){
         return this.getLivros();
     }
     public void atualizar(){
-        for (this.getLivros();;){
-            nomelivro = nomelivro;
-            autor = autor;
-            categoria = categoria;
-        }
+
     }
+
+
 }

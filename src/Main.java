@@ -34,7 +34,7 @@ public class Main {
         System.out.println("*       3 - Atualizar Livros       *");
         System.out.println("*       4 - Locar Livros           *");
         System.out.println("*       5 - Deletar Livros         *");
-        System.out.println("*       6 - Sair         *");
+        System.out.println("*       6 - Sair                   *");
         System.out.println("************************************************");
         System.out.println();
 
@@ -45,16 +45,9 @@ public class Main {
     public static void cod(){
 
         Livros livros = new Livros();
+
         Scanner scan = new Scanner(System.in);
         int fim = 0;
-        int registralivros = 0;
-        int atualizar = 0;
-        int deletar = 0;
-        int locarlivros = 0;
-        int id;
-
-
-        String nomepessoa;
         String[] letras = {"a", "b", "c", "d", "e",
                             "f", "g", "h", "j", "l",
                             "m", "n","o", "p", "q",
@@ -75,12 +68,12 @@ public class Main {
                         System.out.println("\nCategoria do Livro");
                         System.out.println("->");
                         livros.setCategoria(scan.nextLine());
-
                         break;
                     case "2":
                         System.out.println("\n-------------- Listar Livros na Biblioteca  -------");
                         System.out.println("\n--------------------------------");
-                        System.out.println(" Quantidades de livros " + livros.listalivros());
+                        livros.imprimir();
+                        livros.listalivros(livros);
                         break;
 
                     case "3":
@@ -96,6 +89,7 @@ public class Main {
                         System.out.println("->");
                         livros.setCategoria(scan.nextLine());
                         livros.atualizar();
+                        livros.imprimir();
                         break;
 
                 }
